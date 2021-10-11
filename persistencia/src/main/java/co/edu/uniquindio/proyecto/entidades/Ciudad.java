@@ -5,12 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.sql.rowset.serial.SerialStruct;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -24,8 +22,11 @@ public class Ciudad implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
-
+    @Column(nullable = false, length = 80)
     private String nombre;
+    //relacion inversa debe tener un mappeby
+    @OneToMany(mappedBy = "ciudad")
+    private List<Usuario> usuarios;
 
 
     public Ciudad(String nombre) {

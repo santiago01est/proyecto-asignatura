@@ -1,35 +1,28 @@
 package co.edu.uniquindio.proyecto.entidades;
 
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.ClientInfoStatus;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 @ToString
-public class Autor implements Serializable {
+public class Autor extends Persona implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private Integer codigo;
-
-    private String nombre;
+    @Column(nullable = false, precision = 4)
     private Integer anioNacimineto;
+    @ManyToMany(mappedBy = "autores")
+    private List<Libro> libros;
 
 
-    public Autor(String nombre, Integer anioNacimineto) {
-        this.nombre = nombre;
-        this.anioNacimineto = anioNacimineto;
-    }
+
 
 
 }
