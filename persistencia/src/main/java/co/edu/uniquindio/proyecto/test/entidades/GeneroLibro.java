@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyecto.entidades;
+package co.edu.uniquindio.proyecto.test.entidades;
 
 public enum GeneroLibro {
 

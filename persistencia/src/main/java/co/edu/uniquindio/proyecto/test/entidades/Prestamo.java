@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyecto.entidades;
+package co.edu.uniquindio.proyecto.test.entidades;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,7 +11,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter

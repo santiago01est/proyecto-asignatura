@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyecto.entidades;
+package co.edu.uniquindio.proyecto.test.entidades;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -6,10 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.sql.rowset.serial.SerialStruct;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter

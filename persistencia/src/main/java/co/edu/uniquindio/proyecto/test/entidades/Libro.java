@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyecto.entidades;
+package co.edu.uniquindio.proyecto.test.entidades;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -9,7 +9,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Positive;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter

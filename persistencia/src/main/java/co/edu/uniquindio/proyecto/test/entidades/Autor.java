@@ -1,13 +1,10 @@
-package co.edu.uniquindio.proyecto.entidades;
+package co.edu.uniquindio.proyecto.test.entidades;
 
 import lombok.*;
-import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.ClientInfoStatus;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter
